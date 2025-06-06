@@ -23,8 +23,11 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "import pytest"
-                sh "pytest"
+                
+                  sh '''
+                    . venv/bin/activate
+                    pytest
+                '''
                 
             }
         }    
