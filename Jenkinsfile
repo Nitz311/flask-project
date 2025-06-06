@@ -23,6 +23,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh "import pytest"
                 sh "pytest"
                 
             }
